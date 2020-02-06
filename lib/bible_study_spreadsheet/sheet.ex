@@ -1,7 +1,5 @@
 defmodule BibleStudySpreadsheet.Sheet do
   alias GoogleApi.Sheets.V4.Model
-  alias BibleStudySpreadsheet.Bible
-  alias BibleStudySpreadsheet.Bible.Book
 
   def create_sheets(book, title) do
     chapters = Enum.group_by(book, fn v -> v.chapter end)
@@ -41,10 +39,9 @@ defmodule BibleStudySpreadsheet.Sheet do
   end
 
   defp add_rows(chapter) do
-    verses =
-      chapter
-      |> Enum.sort_by(fn c -> c.verse end)
-      |> Enum.map(&create_row_data/1)
+    chapter
+    |> Enum.sort_by(fn c -> c.verse end)
+    |> Enum.map(&create_row_data/1)
   end
 
   defp create_row_data(chapter) do

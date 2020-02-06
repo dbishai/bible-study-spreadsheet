@@ -23,7 +23,7 @@ defmodule BibleStudySpreadsheet.Bible do
         join: b in assoc(v, :book),
         select: v,
         where: b.id == ^book_id,
-        order_by: [asc: v.chapter, asc: v.verse],
+        order_by: [asc: v.chapter, asc: v.verse]
       )
     )
   end
