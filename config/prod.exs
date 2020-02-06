@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :bible_study_spreadsheet, BibleStudySpreadsheetWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "biblestudyspreadsheet.davidbishai.com", port: String.to_integer(System.get_env("PORT") || "80")],
+  url: [host: "davidbishai.com", port: String.to_integer(System.get_env("PORT") || "80")],
   cache_static_manifest: "priv/static/cache_manifest.json",
   http: [port: String.to_integer(System.get_env("PORT") || "80")],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
@@ -64,4 +64,3 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
-import_config "prod.secret.exs"
