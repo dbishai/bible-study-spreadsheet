@@ -14,9 +14,11 @@ alias BibleStudySpreadsheet.Repo
 alias BibleStudySpreadsheet.Bible.Verse
 alias BibleStudySpreadsheet.Bible.Book
 
-def get_bible(filename) do
-  File.stream!(filename)
-  |> Enum.map(&Jason.decode/1)
+defmodule Data do
+  def get_bible(filename) do
+    File.stream!(filename)
+    |> Enum.map(&Jason.decode/1)
+  end
 end
 
 book_positions = %{
@@ -88,7 +90,7 @@ book_positions = %{
   "Philippians" => 49
 }
 
-bible = get_bible("/tmp/asv.json")
+bible = Data.get_bible("/tmp/asv.json")
 
 # books =
 #   Enum.map(bible, fn row ->
