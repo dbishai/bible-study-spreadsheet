@@ -1,20 +1,17 @@
-# BibleStudySpreadsheet
+# Bible Study Spreadsheet
+Wrote this as a favor for a friend.
 
-To start your Phoenix server:
+![App](content/app.png)
+![Spreadsheet](content/spreadsheet.png)
 
+## Instructions
+  * Download one of the JSON Bibles from [bibleapi-bibles-json](https://github.com/bibleapi/bibleapi-bibles-json).
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
+  * Run `mix run priv/repo/seeds.exs` to seed the database
   * Install Node.js dependencies with `cd assets && npm install`
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+God bless!
