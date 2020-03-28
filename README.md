@@ -8,7 +8,6 @@ Wrote this as a favor for a friend.
   * Download one of the JSON Bibles from [bibleapi-bibles-json](https://github.com/bibleapi/bibleapi-bibles-json).
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
-  * Run `mix run priv/repo/seeds.exs` to seed the database
   * Install Node.js dependencies with `cd assets && npm install`
   * Start Phoenix endpoint with `mix phx.server`
 
